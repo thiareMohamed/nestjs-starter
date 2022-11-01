@@ -29,7 +29,7 @@ export class UsersController {
   async findOne(@Param('id') id: string): Promise<SerializedUser> {
     try {
       const user = await this.usersService.findOne(+id);
-      if (user) return new SerializedUser(user);
+      if (user.id) return new SerializedUser(user);
     } catch (error) {
       throw new NotFoundException("User not found");
     }
