@@ -5,7 +5,7 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { SerializedUser, User } from '../entities/user.entity';
 import { NotFoundException, ConflictException } from 'src/config/exception/exceptions';
 
-@Controller('users')
+@Controller('api/users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
